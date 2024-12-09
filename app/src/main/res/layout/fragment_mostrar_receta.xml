@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.MostrarRecetaFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Imagen de la receta -->
+            <ImageView
+                android:id="@+id/imagen_receta"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="centerCrop"
+                tools:src="@tools:sample/avatars"/>
+
+            <!-- Nombre de la receta -->
+            <TextView
+                android:id="@+id/nombre_receta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre receta"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_primary"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textAllCaps="true" />
+
+
+            <!-- Descripción de la receta -->
+            <TextView
+                android:id="@+id/descripcion_receta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descripción"
+                android:textSize="17sp"
+                android:textColor="@color/text_secondary"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <!-- Título de ingredientes -->
+            <TextView
+                android:id="@+id/titulo_ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingredientes"
+                android:textSize="17dp"
+                android:textColor="@color/blue_primary"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <!-- RecyclerView para ingredientes -->
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_ingredientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp" />
+            </ScrollView>
+
+            <!-- Título de preparación -->
+            <TextView
+                android:id="@+id/titulo_preparacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Preparación"
+                android:textSize="17sp"
+                android:textColor="@color/blue_primary"
+                android:textStyle="bold"
+                android:padding="10dp"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+
+            <!-- Descripción de preparación -->
+            <TextView
+                android:id="@+id/descripcion_preparacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="La preparación..."
+                android:textSize="17sp"
+                android:textColor="@color/text_secondary"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</FrameLayout>

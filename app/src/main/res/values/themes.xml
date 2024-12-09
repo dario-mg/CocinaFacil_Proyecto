@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema base con tonos azulados -->
+    <style name="Base.Theme.CocinaFacil" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Colores principales -->
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="colorPrimaryDark">@color/blue_dark</item>
+        <item name="colorAccent">@color/blue_accent</item>
+
+        <!-- Fondo y texto -->
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+
+        <!-- Personalización de botones -->
+        <item name="android:buttonStyle">@style/ButtonStyle.CocinaFacil</item>
+    </style>
+
+    <!-- Tema principal que hereda del base -->
+    <style name="Theme.CocinaFacil" parent="Base.Theme.CocinaFacil" />
+</resources>

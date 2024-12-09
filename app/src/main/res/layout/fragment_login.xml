@@ -1,0 +1,115 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <!-- Imagen de usuario -->
+            <ImageView
+                android:layout_marginTop="60dp"
+                android:id="@+id/imagen_usuario"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:contentDescription="Imagen de usuario"
+                android:src="@drawable/logo_aplicacion" />
+
+            <!-- ProgressBar de carga (oculto por defecto) -->
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+            <!-- Texto de "Cargando..." (oculto por defecto) -->
+            <TextView
+                android:id="@+id/texto_cargando"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Cargando..."
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- Nuevo TextView para mostrar el resultado de la verificación -->
+            <TextView
+                android:id="@+id/texto_resultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text=""
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <!-- Campo de usuario -->
+            <EditText
+                android:id="@+id/campo_usuario"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/introducir_texto"
+                android:ems="10"
+                android:hint="Usuario"
+                android:inputType="text"
+                android:padding="10dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <!-- Campo de contraseña -->
+            <EditText
+                android:id="@+id/campo_contrasena"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/introducir_texto"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:padding="10dp"
+                android:textColor="#333333"
+                android:textSize="16sp" />
+
+            <!-- Botón de iniciar sesión -->
+            <Button
+                android:id="@+id/boton_iniciar_sesion"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/botones_diseno"
+                android:text="Iniciar sesión"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <!-- Texto de registro -->
+            <TextView
+                android:id="@+id/texto_registro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="40dp"
+                android:text="¿No tienes cuenta? Regístrate aquí"
+                android:textColor="@color/blue_accent"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

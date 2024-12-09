@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle.CocinaFacil" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/blue_primary</item>
+        <item name="android:textColor">#FFFFFFFF</item>
+    </style>
+
+    <style name="CardStyle.CocinaFacil" parent="Widget.MaterialComponents.CardView">
+        <!-- Fondo de la tarjeta -->
+        <item name="cardBackgroundColor">@color/blue_light</item>
+        <!-- Radio de las esquinas -->
+        <item name="cardCornerRadius">12dp</item>
+        <!-- Elevación (sombra) -->
+        <item name="cardElevation">6dp</item>
+    </style>
+
+
+</resources>

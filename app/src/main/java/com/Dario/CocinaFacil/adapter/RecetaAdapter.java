@@ -164,6 +164,11 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
         void onItemClick(Receta receta);
     }
 
+    /**
+     * Update list.
+     *
+     * @param newList the new list
+     */
     public void updateList(List<Receta> newList) {
         this.listaRecetas.clear();
         this.listaRecetas.addAll(newList);

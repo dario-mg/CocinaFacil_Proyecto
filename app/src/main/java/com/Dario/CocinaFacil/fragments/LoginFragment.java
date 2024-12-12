@@ -46,10 +46,6 @@ public class LoginFragment extends Fragment {
         verificacionViewModel = new ViewModelProvider(this).get(VerificacionViewModel.class);
 
 
-        //ELIMINAR
-        campoUsuario.setText("dario");
-        campoContrasena.setText("dario");
-
         botonIniciarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

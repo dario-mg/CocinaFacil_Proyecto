@@ -4,34 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/background_light">
+    android:background="@color/background_light"
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="130dp"
         android:layout_gravity="center_vertical"
         android:orientation="horizontal"
         android:padding="20dp">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="120dp"
+            android:layout_width="170dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/logo_aplicacion" />
 
-        <TextView
-            android:id="@+id/textView"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:gravity="center_vertical"
-            android:paddingStart="20dp"
-            android:text="Cocina Facil"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/blue_primary" />
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:paddingStart="10dp"
+                android:text="Cocina Facil"
+                android:textColor="@color/blue_primary"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/buscadorRecetas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:queryHint="Tiramisu..."
+                android:background="@drawable/buscador_diseno"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+
     </LinearLayout>
 
     <View

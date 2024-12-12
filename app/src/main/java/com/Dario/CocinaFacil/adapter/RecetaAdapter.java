@@ -12,10 +12,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.Dario.CocinaFacil.R;
 import com.Dario.CocinaFacil.fragments.MostrarRecetaFragment;
+import com.Dario.CocinaFacil.models.Ingrediente;
 import com.Dario.CocinaFacil.models.Receta;
 import com.Dario.CocinaFacil.viewModel.AplicacionViewModel;
 
@@ -140,18 +143,9 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
 
                         // Introducimos la receta al ViewModel
                         aplicacionViewModel.ListaIngredientesReceta(receta);
-
-                        // No es necesario pasarle nada al fragmento, ya que la receta está en el ViewModel
-                        MostrarRecetaFragment mostrarRecetaFragment = new MostrarRecetaFragment(); // Instanciamos el fragmento
-
-                        // Aseguramos que el contexto sea una instancia de AppCompatActivity
-                        AppCompatActivity activity = (AppCompatActivity) context;
-
-                        // Creamos una transacción de fragmentos para reemplazar el fragmento actual
-                        FragmentTransaction transaction = activity.getSupportFragmentManager().beginTransaction();
-                        transaction.replace(R.id.nav_host_fragment, mostrarRecetaFragment);
-                        transaction.addToBackStack(null); // Añadimos a la pila de retroceso
-                        transaction.commit(); // Ejecutamos la transacción
+                        
+                        NavController navController = Navigation.findNavController(v);
+                        navController.navigate(R.id.mostrarRecetaFragment);
                     }
                 }
             });
@@ -168,5 +162,11 @@ public class RecetaAdapter extends RecyclerView.Adapter<RecetaAdapter.RecetaView
          * @param receta the receta
          */
         void onItemClick(Receta receta);
+    }
+
+    public void updateList(List<Receta> newList) {
+        this.listaRecetas.clear();
+        this.listaRecetas.addAll(newList);
+        notifyDataSetChanged();
     }
 }

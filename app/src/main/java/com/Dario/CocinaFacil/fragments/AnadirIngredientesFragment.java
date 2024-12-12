@@ -82,7 +82,7 @@ public class AnadirIngredientesFragment extends Fragment {
         // Configurar el botón "Volver"
         Button volverButton = view.findViewById(R.id.button);
         volverButton.setOnClickListener(v -> {
-            filterListWithCantidad();
+            ingredientesCantidadReceta();
             NavController navController = Navigation.findNavController(v);
             navController.navigate(R.id.anadirFragment);
         });
@@ -105,7 +105,7 @@ public class AnadirIngredientesFragment extends Fragment {
         return view;
     }
 
-    private void filterListWithCantidad() {
+    private void ingredientesCantidadReceta() {
         List<Ingrediente> filteredList = new ArrayList<>();
         for (Ingrediente ingrediente : listaIngredientes) {
             // Comprobar si la cantidad es nula o está vacía

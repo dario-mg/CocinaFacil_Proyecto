@@ -36,30 +36,31 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:queryHint="Buscar ingrediente" />
+            android:background="@drawable/buscador_diseno"
+            android:hint="Aceite..." />
 
         <!-- ScrollView que contiene el RecyclerView -->
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginBottom="10dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+            android:layout_weight="1"
+            android:fillViewport="true">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/lista_ingredientes"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/lista_ingredientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </ScrollView>
+
+        <!-- Button al final -->
+        <Button
+            android:id="@+id/button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </ScrollView>
+            android:layout_height="wrap_content"
+            android:background="@drawable/botones_diseno"
+            android:text="Volver"
+            android:textSize="20dp" />
 
-    <!-- Button al final -->
-    <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/botones_diseno"
-        android:textSize="20dp"
-        android:text="Volver" />
-
-</LinearLayout>
-    </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

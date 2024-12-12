@@ -27,6 +27,7 @@ $dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter/getItemCount/#/Point
 $dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter/onBindViewHolder/#com.Dario.CocinaFacil.adapter.RecetaAdapter.RecetaViewHolder#int/PointingToDeclaration/app/com.Dario.CocinaFacil.adapter/-receta-adapter/on-bind-view-holder.html
 $dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter/onCreateViewHolder/#android.view.ViewGroup#int/PointingToDeclaration/app/com.Dario.CocinaFacil.adapter/-receta-adapter/on-create-view-holder.html
 $dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter/setRecetas/#java.util.List<com.Dario.CocinaFacil.models.Receta>/PointingToDeclaration/app/com.Dario.CocinaFacil.adapter/-receta-adapter/set-recetas.html
+$dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter/updateList/#java.util.List<com.Dario.CocinaFacil.models.Receta>/PointingToDeclaration/app/com.Dario.CocinaFacil.adapter/-receta-adapter/update-list.html
 $dokka.location:com.Dario.CocinaFacil.fragments////PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/index.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment///PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/index.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment/AnadirFragment/#/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/-anadir-fragment.html

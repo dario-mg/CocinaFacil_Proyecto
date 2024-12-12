@@ -144,27 +144,30 @@ public class AnadirFragment extends Fragment {
                     // Mostrar un mensaje de error si algún campo está vacío
                     Toast.makeText(getActivity(), "Todos los campos deben ser completados", Toast.LENGTH_SHORT).show();
                 } else {
-                    // Si no están vacíos, se crea la receta
-                    receta = new Receta(
-                            editarNombreReceta.getText().toString(),
-                            editarDescripcionReceta.getText().toString(),
-                            editarInstruccionesReceta.getText().toString(),
-                            usuarioSesion.getId(),
-                            imagenRecetaBitmap);
-
-                    // Observar los ingredientes y guardar la receta
+                    // Observar los ingredientes y guardar la receta solo cuando los ingredientes estén disponibles
                     aplicacionViewModel.getListaIngredientesAnadir().observe(getViewLifecycleOwner(), new Observer<List<Ingrediente>>() {
                         @Override
                         public void onChanged(List<Ingrediente> ingredientes) {
-                            aplicacionViewModel.introducirReceta(receta, ingredientes);
+                            if (ingredientes != null && !ingredientes.isEmpty()) {
+                                receta = new Receta(
+                                        editarNombreReceta.getText().toString(),
+                                        editarDescripcionReceta.getText().toString(),
+                                        editarInstruccionesReceta.getText().toString(),
+                                        usuarioSesion.getId(),
+                                        imagenRecetaBitmap
+                                );
+                                aplicacionViewModel.introducirReceta(receta, ingredientes);
+
+                                // Limpiar campos y resetear ViewModel
+                                limpiarCamposYReceta();
+
+                                // Actualizar el ViewModel para todas las recetas
+                                aplicacionViewModel.todasLasRecetas();
+                            } else {
+                                Toast.makeText(getActivity(), "No hay ingredientes para guardar.", Toast.LENGTH_SHORT).show();
+                            }
                         }
                     });
-
-                    // Limpiar campos y resetear ViewModel
-                    limpiarCamposYReceta();
-
-                    // Actualizar el ViewModel para todas las recetas
-                    aplicacionViewModel.todasLasRecetas();
                 }
             }
         });
@@ -228,6 +231,7 @@ public class AnadirFragment extends Fragment {
             }
         }
     }
+
     @Override
     public void onResume() {
         super.onResume();
@@ -237,6 +241,5 @@ public class AnadirFragment extends Fragment {
         aplicacionViewModel.setDescripcionReceta(null);
         aplicacionViewModel.setInstruccionesReceta(null);
     }
-
 
 }

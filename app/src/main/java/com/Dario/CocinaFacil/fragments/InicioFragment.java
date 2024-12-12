@@ -55,7 +55,7 @@ public class InicioFragment extends Fragment {
 
         recyclerView.setAdapter(recetaAdapter);
 
-
+ 
         aplicacionViewModel.getTodasLasRecetas().observe(getViewLifecycleOwner(), new Observer<List<Receta>>() {
             @Override
             public void onChanged(List<Receta> recetas) {
@@ -84,11 +84,13 @@ public class InicioFragment extends Fragment {
 
     private void filterListByNombreIngrediente(String query) {
         List<Receta> filteredList = new ArrayList<>();
-        if (query != null && !query.isEmpty()) {
+        if (query != null && !query.isEmpty() && query.equalsIgnoreCase("")) {
             for (Receta ingrediente : listaReceta) {
                 // Filtra por nombre del ingrediente, ignorando mayúsculas/minúsculas
                 if (ingrediente.getNombreReceta().toLowerCase().contains(query.toLowerCase())) {
                     filteredList.add(ingrediente);
+                }else{
+                    filteredList = listaReceta;
                 }
             }
         } else {

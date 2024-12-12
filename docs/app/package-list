@@ -33,6 +33,7 @@ $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment///PointingToDecla
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment/AnadirFragment/#/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/-anadir-fragment.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment/onActivityResult/#int#int#android.content.Intent/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/on-activity-result.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup#android.os.Bundle/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/on-create-view.html
+$dokka.location:com.Dario.CocinaFacil.fragments/AnadirFragment/onResume/#/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-fragment/on-resume.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirIngredientesFragment///PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-ingredientes-fragment/index.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirIngredientesFragment/AnadirIngredientesFragment/#/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-ingredientes-fragment/-anadir-ingredientes-fragment.html
 $dokka.location:com.Dario.CocinaFacil.fragments/AnadirIngredientesFragment/onCreateView/#android.view.LayoutInflater#android.view.ViewGroup#android.os.Bundle/PointingToDeclaration/app/com.Dario.CocinaFacil.fragments/-anadir-ingredientes-fragment/on-create-view.html

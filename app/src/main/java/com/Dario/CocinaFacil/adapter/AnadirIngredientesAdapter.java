@@ -41,28 +41,38 @@ public class AnadirIngredientesAdapter extends RecyclerView.Adapter<AnadirIngred
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        // Asignar los datos al viewHolder
+        // Asignar los datos al ViewHolder
         Ingrediente ingrediente = listaIngredientes.get(position);
         holder.nombreIngrdiente.setText(ingrediente.getNombreIngrdiente());
+
+        // Remover listeners existentes antes de configurar el campo
+        if (holder.cantidad.getTag() != null) {
+            holder.cantidad.removeTextChangedListener((TextWatcher) holder.cantidad.getTag());
+        }
 
         // Configurar el InputEditText con el valor de cantidad
         holder.cantidad.setText(ingrediente.getCantidad());
 
-        // Establecer un Listener para capturar cambios en la cantidad
-        holder.cantidad.addTextChangedListener(new TextWatcher() {
+        // Crear un TextWatcher para actualizar el modelo de datos
+        TextWatcher watcher = new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
             @Override
-            public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
-                // Actualizar la cantidad sin tocar el id
-                ingrediente.setCantidad(charSequence.toString());
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                // Actualizar la cantidad del ingrediente
+                ingrediente.setCantidad(s.toString());
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {}
-        });
+            public void afterTextChanged(Editable s) {}
+        };
+
+        // Agregar el listener y almacenar como tag
+        holder.cantidad.addTextChangedListener(watcher);
+        holder.cantidad.setTag(watcher);
     }
+
 
     @Override
     public int getItemCount() {

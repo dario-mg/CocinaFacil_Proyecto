@@ -113,7 +113,7 @@ public class AnadirIngredientesFragment extends Fragment {
                 filteredList.add(ingrediente);
             }
         }
-        // Actualizar el ViewModel con la lista filtrada
+        // Sincroniza la lista de ingredientes con cantidades no vacías
         aplicacionViewModel.ListaIngredientesAnadir(filteredList);
     }
 
@@ -132,5 +132,8 @@ public class AnadirIngredientesFragment extends Fragment {
         }
         // Actualizar la lista filtrada en el adaptador
         adapter.updateList(filteredList);
+
+        // Sincronizar la lista filtrada con el ViewModel
+        aplicacionViewModel.ListaIngredientesAnadir(filteredList);
     }
 }

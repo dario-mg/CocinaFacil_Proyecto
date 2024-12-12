@@ -37,7 +37,10 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
             android:background="@drawable/buscador_diseno"
+            app:iconifiedByDefault="false"
             android:hint="Aceite..." />
+
+
 
         <!-- ScrollView que contiene el RecyclerView -->
         <ScrollView

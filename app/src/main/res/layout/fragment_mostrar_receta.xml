@@ -63,10 +63,7 @@
                 android:paddingStart="20dp"
                 android:paddingEnd="20dp" />
 
-            <!-- RecyclerView para ingredientes -->
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="150dp">
+
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recycler_ingredientes"
@@ -75,7 +72,7 @@
                     android:layout_marginBottom="20dp"
                     android:paddingStart="20dp"
                     android:paddingEnd="20dp" />
-            </ScrollView>
+
 
             <!-- Título de preparación -->
             <TextView

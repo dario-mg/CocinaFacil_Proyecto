@@ -33,6 +33,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import android.content.Intent;
 import android.net.Uri;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -140,7 +141,7 @@ public class AnadirFragment extends Fragment {
                         editarDescripcionReceta.getText().toString().isEmpty() ||
                         editarInstruccionesReceta.getText().toString().isEmpty()) {
 
-                    // Muestra un mensaje de error si algún campo está vacío
+                    // Mostrar un mensaje de error si algún campo está vacío
                     Toast.makeText(getActivity(), "Todos los campos deben ser completados", Toast.LENGTH_SHORT).show();
                 } else {
                     // Si no están vacíos, se crea la receta
@@ -158,6 +159,11 @@ public class AnadirFragment extends Fragment {
                             aplicacionViewModel.introducirReceta(receta, ingredientes);
                         }
                     });
+
+                    // Limpiar campos y resetear ViewModel
+                    limpiarCamposYReceta();
+
+                    // Actualizar el ViewModel para todas las recetas
                     aplicacionViewModel.todasLasRecetas();
                 }
             }
@@ -171,6 +177,7 @@ public class AnadirFragment extends Fragment {
                 if (aBoolean) {
                     verificarReceta.setText("RECETA INTRODUCIDA CORRECTAMENTE");
                     verificarReceta.setTextColor(Color.parseColor("#4CAF50"));
+                    onResume();
                 } else {
                     verificarReceta.setText("ERROR AL INTRODUCIR RECETA");
                     verificarReceta.setTextColor(Color.parseColor("#F44336"));
@@ -181,6 +188,25 @@ public class AnadirFragment extends Fragment {
 
         return view;
     }
+
+    private void limpiarCamposYReceta() {
+        // Limpia los campos de texto
+        editarNombreReceta.setText("");
+        editarDescripcionReceta.setText("");
+        editarInstruccionesReceta.setText("");
+
+        // Oculta la imagen de previsualización
+        imagenRecetaPrevisualizar.setVisibility(View.GONE);
+        etiquetaPrevisualizarImagen.setVisibility(View.GONE);
+        imagenRecetaBitmap = null;
+
+        // Limpia la lista de ingredientes en el ViewModel
+        aplicacionViewModel.ListaIngredientesAnadir(new ArrayList<>()); // Lista vacía
+
+        // Notifica al usuario
+        Toast.makeText(getActivity(), "Receta guardada y campos limpiados", Toast.LENGTH_SHORT).show();
+    }
+
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -202,5 +228,15 @@ public class AnadirFragment extends Fragment {
             }
         }
     }
+    @Override
+    public void onResume() {
+        super.onResume();
+
+        // Limpiar los valores del ViewModel al regresar al fragmento de añadir receta
+        aplicacionViewModel.setNombreReceta(null);
+        aplicacionViewModel.setDescripcionReceta(null);
+        aplicacionViewModel.setInstruccionesReceta(null);
+    }
+
 
 }

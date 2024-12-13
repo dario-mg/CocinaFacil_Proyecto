@@ -61,7 +61,7 @@ dependencies {
 }
 
 // Configuración de Dokka
-tasks.dokkaHtml.configure {
+tasks.dokkaJavadoc.configure {
     outputDirectory.set(buildDir.resolve("docs")) // Carpeta donde se generará la documentación
 
     dokkaSourceSets {
@@ -79,3 +79,23 @@ tasks.dokkaHtml.configure {
         }
     }
 }
+//
+//
+//tasks.dokkaHtml.configure {
+//    outputDirectory.set(buildDir.resolve("docs")) // Carpeta donde se generará la documentación
+//
+//    dokkaSourceSets {
+//        create("main") {
+//            displayName.set("Android Project Documentation")
+//            sourceRoots.from(
+//                file("src/main/java"), // Código Java
+//            )
+//            platform.set(org.jetbrains.dokka.Platform.jvm) // Android JVM
+//            classpath.from(
+//                files(android.bootClasspath), // Clases base de Android
+//                configurations["debugCompileClasspath"], // Rutas para dependencias
+//                configurations["releaseCompileClasspath"] // Rutas de clases en modo release
+//            )
+//        }
+//    }
+//}

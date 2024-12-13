@@ -163,8 +163,6 @@ public class AnadirFragment extends Fragment {
 
                                 // Actualizar el ViewModel para todas las recetas
                                 aplicacionViewModel.todasLasRecetas();
-                            } else {
-                                Toast.makeText(getActivity(), "No hay ingredientes para guardar.", Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

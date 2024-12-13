@@ -1,0 +1,22 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:com.Dario.CocinaFacil.adapter/AnadirIngredientesAdapter.ViewHolder///PointingToDeclaration/com/Dario/CocinaFacil/adapter/AnadirIngredientesAdapter.ViewHolder.html
+$dokka.location:com.Dario.CocinaFacil.adapter/IngredienteAdapter.IngredienteViewHolder///PointingToDeclaration/com/Dario/CocinaFacil/adapter/IngredienteAdapter.IngredienteViewHolder.html
+$dokka.location:com.Dario.CocinaFacil.adapter/RecetaAdapter.OnItemClickListener///PointingToDeclaration/com/Dario/CocinaFacil/adapter/RecetaAdapter.OnItemClickListener.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackDatosDeLaReceta///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackDatosDeLaReceta.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackIntroducirReceta///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackIntroducirReceta.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackListaIngredietesAnadir///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackListaIngredietesAnadir.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackRecetasUsuario///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackRecetasUsuario.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackSesionUsuario///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackSesionUsuario.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackTodasLasRecetas///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackTodasLasRecetas.html
+$dokka.location:com.Dario.CocinaFacil.model/AplicacionModel.CallbackTodosLosIngrdientes///PointingToDeclaration/com/Dario/CocinaFacil/model/AplicacionModel.CallbackTodosLosIngrdientes.html
+$dokka.location:com.Dario.CocinaFacil.model/VerificacionModel.CallbackUsuarioComprobado///PointingToDeclaration/com/Dario/CocinaFacil/model/VerificacionModel.CallbackUsuarioComprobado.html
+$dokka.location:com.Dario.CocinaFacil.model/VerificacionModel.CallbackUsuarioRegistrado///PointingToDeclaration/com/Dario/CocinaFacil/model/VerificacionModel.CallbackUsuarioRegistrado.html
+$dokka.location:com.Dario.CocinaFacil.model/VerificacionModel.InicioSesion///PointingToDeclaration/com/Dario/CocinaFacil/model/VerificacionModel.InicioSesion.html
+com.Dario.CocinaFacil
+com.Dario.CocinaFacil.adapter
+com.Dario.CocinaFacil.fragments
+com.Dario.CocinaFacil.model
+com.Dario.CocinaFacil.models
+com.Dario.CocinaFacil.viewModel
+
